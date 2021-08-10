@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane onMouseMoved="#mousseMoved" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LocationController">
+   <children>
+      <SplitPane dividerPositions="0.6555183946488294" orientation="VERTICAL" prefHeight="600.0" prefWidth="1000.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="388.0" prefWidth="998.0">
+               <children>
+                  <SplitPane dividerPositions="0.5094905094905094" layoutX="-2.0" layoutY="2.0" prefHeight="384.0" prefWidth="1003.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Label layoutX="200.0" layoutY="18.0" text="VEHICULE" textAlignment="CENTER" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="41.0" layoutY="85.0" prefWidth="84.0" text="MATRICULE :" />
+                              <Label layoutX="47.0" layoutY="137.0" text="COULEUR :" />
+                              <Label layoutX="47.0" layoutY="183.0" text="NUM CAT :" />
+                              <Label layoutX="54.0" layoutY="229.0" text="NBR CHX :" />
+                              <Label layoutX="46.0" layoutY="280.0" text="MARQUE :" />
+                              <Label layoutX="49.0" layoutY="329.0" text="MODELE :" />
+                              <TextField fx:id="couleurTfd" layoutX="141.0" layoutY="126.0" />
+                              <TextField fx:id="numCatTfd" layoutX="147.0" layoutY="184.0" />
+                              <TextField fx:id="nbrChxTfd" layoutX="152.0" layoutY="230.0" />
+                              <TextField fx:id="marqueTfd" layoutX="154.0" layoutY="284.0" />
+                              <TextField fx:id="modeleTfd" layoutX="156.0" layoutY="324.0" />
+                              <TextField fx:id="matriculeTfd" layoutX="143.0" layoutY="86.0" onMouseEntered="#MousseIn" onMouseExited="#MousseOut" />
+                              <ListView fx:id="matriculeLview" layoutX="143.0" layoutY="110.0" onMouseClicked="#matriculeLviewMousseClicked" onMouseEntered="#matriculeLviewMousseIn" onMouseExited="#matriculeLviewMousseOut" prefHeight="153.0" prefWidth="171.0" visible="false" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="382.0" prefWidth="559.0">
+                           <children>
+                              <Label layoutX="193.0" layoutY="16.0" text="LOCATAIRE" textAlignment="CENTER" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="44.0" layoutY="84.0" prefWidth="84.0" text="NUM PIECE :" />
+                              <Label layoutX="49.0" layoutY="131.0" prefWidth="84.0" text="PRENOM :" />
+                              <Label layoutX="47.0" layoutY="172.0" prefWidth="84.0" text="NOM :" />
+                              <Label layoutX="49.0" layoutY="210.0" prefWidth="84.0" text="TEL :" />
+                              <Label layoutX="44.0" layoutY="257.0" prefHeight="16.0" prefWidth="128.0" text="DATE NAISSANCE :" />
+                              <TextField fx:id="numPieceTfd" layoutX="194.0" layoutY="88.0" onMouseEntered="#numPieceMousseIn" onMouseExited="#numPieceMousseOut" />
+                              <TextField fx:id="prenomTfd" layoutX="203.0" layoutY="132.0" />
+                              <TextField fx:id="nomTfd" layoutX="206.0" layoutY="173.0" />
+                              <TextField fx:id="telTfd" layoutX="202.0" layoutY="209.0" />
+                              <TextField fx:id="dateNaissPkr" layoutX="206.0" layoutY="252.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="998.0">
+               <children>
+                  <Label layoutX="441.0" layoutY="-1.0" text="LOCATION" textAlignment="CENTER" underline="true">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="51.0" prefWidth="84.0" text="DATE :" />
+                  <Label layoutX="392.0" layoutY="53.0" prefWidth="84.0" text="MONTANT :" />
+                  <DatePicker fx:id="dateDpr" layoutX="88.0" layoutY="47.0" />
+                  <TextField fx:id="montantTfd" layoutX="505.0" layoutY="46.0" />
+                  <Label layoutX="9.0" layoutY="105.0" prefHeight="16.0" prefWidth="128.0" text="COMMENTAIRE :" />
+                  <TextArea fx:id="commentaireTarea" layoutX="121.0" layoutY="101.0" prefHeight="94.0" prefWidth="211.0" />
+                  <Button fx:id="saveBtn" layoutX="815.0" layoutY="43.0" mnemonicParsing="false" onAction="#clickEnreg" prefHeight="54.0" prefWidth="128.0" text="ENREGISTRER" />
+                  <Button fx:id="backBtn" layoutX="816.0" layoutY="120.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="54.0" prefWidth="128.0" text="RETOUR" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
